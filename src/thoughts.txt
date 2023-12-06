@@ -1,0 +1,8 @@
+Pascalsches Dreieck:
+Reihe0    1
+Reihe1   1 1
+Reihe2  1 2 1
+Reihe3 1 3 3 1
+usw.
+
+Die in reihe x entsprechen dem Binomialkoeffizienten x ueber k.
