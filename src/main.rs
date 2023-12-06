@@ -1,13 +1,12 @@
+use std::io;// for user input
+use num_bigint::BigUint;// to use BigUint
+use num_traits::FromPrimitive;// to convert Primitive datatypes to BigUint
 
-use std::io;
-use num_bigint::BigUint;
-use num_traits::FromPrimitive;
-
-
+/**
+ * Die Hauptfunktion, sie wir dmit Start des Programmes ausgefuehrt.
+ */
 fn main() {
-
-
-    //how to assign BIGINT:  //let bignumber: BigUint = BigUint::from(variable:u128);
+    //how to assign BIGUINT:  //let bignumber: BigUint = BigUint::from(variable:u128);
     
     let mut inputn = String::new();
     println!("Please type the row of the Pascla-triangle, you want to calculate.");
@@ -21,11 +20,8 @@ fn main() {
 
 /**
  * Berechnet die Fakultaet der uebergebenen Zahl.
- * die uebergebene Zahl darf maximal 34 sein.
 */
 fn fakul(faknum:u128) -> BigUint{
-
-    if true{ //TODO remove if statement
 
         let mut result:BigUint = BigUint::from_u64(1).unwrap();
 
@@ -48,12 +44,6 @@ fn fakul(faknum:u128) -> BigUint{
             i += 1;
         }
         return result;
-    }
-    else {
-        println!("Die an Fakul übergebene Zahl ist größer als 34, das Programm wird beendet!");
-        std::process::exit(1);
-    }
-
 }
 
 /**
