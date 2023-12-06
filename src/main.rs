@@ -51,13 +51,16 @@ fn fakul(faknum:u128) -> u128{
  * berechnet den Binomialkoeffizienten der uebergebenen Zahlen 'n' und 'k' und gibt das Ergebnis ueber die Konsole aus.
 */
 fn binomkoeff(n:u128,) {
-    //TODO insert loop, to loop through all k-values.
-    //TODO calculate the max number of k-values (kmax = n+1)???
-    let mut k:u128 = 12;
+   
+    let mut k:u128 = 0;
+    let mut result:u128 = 1;
     //n ueber k = n!/(k!*(n-k)!)
 
-    let result:u128 = fakul(n)/(fakul(k)*fakul(n-k));
-
-    println!("Der Binomialkoeffizient ist: {}", result)
+    while k <= n {
+        
+        result = fakul(n)/(fakul(k)*fakul(n-k));
+        println!("Die Stelle {0} der Reihe{1} ist: {2}", k, n, result);
+        k +=1;
+    }
     
 }
