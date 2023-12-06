@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
 
     let n:u128 = 12;
@@ -49,6 +51,6 @@ fn binomkoeff(n:u128, k:u128) {
 
     let result:u128 = fakul(n)/(fakul(k)*fakul(n-k));
 
-    println!("result of binomkoeff: {}", result)
+    println!("Der Binomialkoeffizient ist: {}", result)
     
 }
