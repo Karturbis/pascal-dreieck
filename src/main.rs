@@ -1,12 +1,13 @@
 fn main() {
-    let number:u128 = 16;
-    fakultaet(number)
+    let number:u128 = 34;
+    fakul(number)
 }
 
 /**
 Berechnet die Fakultaet der uebergebenen Zahl.
+die uebergebene Zahl darf maximal 34 sein.
 */
-fn fakultaet(faknumber:u128){
+fn fakul(faknum:u128){
 
     let mut result:u128 = 1;
     let mut i:u128 = 1;
@@ -18,7 +19,6 @@ fn fakultaet(faknumber:u128){
     3! = 1*2*3      = 6
     4! = 1*2*3*4    = 24
     5! = 1*2*3*4*5  = 120
-
     daher x*(x-1)! = x!
     */ 
     while i <= faknumber{
