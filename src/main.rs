@@ -1,7 +1,14 @@
+
 use std::io;
+use num_bigint::BigUint;
+use num_traits::FromPrimitive;
+
 
 fn main() {
 
+
+    //how to assign BIGINT:  //let bignumber: BigUint = BigUint::from(variable:u128);
+    
     let mut inputn = String::new();
     println!("Please type the row of the Pascla-triangle, you want to calculate.");
     io::stdin()
@@ -9,18 +16,19 @@ fn main() {
         .expect("Could not read input from stdin.");
 
     let n:u128 = inputn.trim().parse::<u128>().unwrap();
-    binomkoeff(n,);
+    binomkoeff(n);
 }
 
 /**
  * Berechnet die Fakultaet der uebergebenen Zahl.
  * die uebergebene Zahl darf maximal 34 sein.
 */
-fn fakul(faknum:u128) -> u128{
+fn fakul(faknum:u128) -> BigUint{
 
-    if faknum <=34{
+    if true{ //TODO remove if statement
 
-        let mut result:u128 = 1;
+        let mut result:BigUint = BigUint::from_u64(1).unwrap();
+
         let mut i:u128 = 1;
         /*
         Fakultäten:
@@ -34,9 +42,10 @@ fn fakul(faknum:u128) -> u128{
         */ 
         while i <= faknum{
             
-            result = result * i;
+            let j:BigUint = BigUint::from_u128(i).unwrap();
+            result = result * j;
 
-            i +=1;
+            i += 1;
         }
         return result;
     }
@@ -53,14 +62,14 @@ fn fakul(faknum:u128) -> u128{
 fn binomkoeff(n:u128,) {
    
     let mut k:u128 = 0;
-    let mut result:u128 = 1;
+    let mut result:BigUint = BigUint::from_u8(1).unwrap();
     //n ueber k = n!/(k!*(n-k)!)
 
     while k <= n {
         
         result = fakul(n)/(fakul(k)*fakul(n-k));
         println!("Die Stelle {0} der Reihe{1} ist: {2}", k, n, result);
-        k +=1;
+        k += 1;
     }
     
 }
