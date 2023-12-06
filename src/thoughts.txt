@@ -14,3 +14,8 @@ ist der Binomialkoeffizient von 3(also der zahl der reihe) ueber 0(also der stel
 Die erste Zahl (3) ist der Binomialkoeffizient von 3 ueber 1
 Die zweite Zahl (3) ist der Binomialkoeffizient von 3 ueber 2
 Die dritte Zahl (1) ist der Binomialkoeffizient von 3 ueber 3
+
+
+Binomialkoeffizient:
+
+n ueber k = n!/(k!*(n-k)!)
