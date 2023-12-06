@@ -2,9 +2,14 @@ use std::io;
 
 fn main() {
 
-    let n:u128 = 12;
-    let k:u128 = 8;
-    binomkoeff(n, k);
+    let mut inputn = String::new();
+    println!("Please type the row of the Pascla-triangle, you want to calculate.");
+    io::stdin()
+        .read_line(&mut inputn)
+        .expect("Could not read input from stdin.");
+
+    let n:u128 = inputn.trim().parse::<u128>().unwrap();
+    binomkoeff(n,);
 }
 
 /**
@@ -45,8 +50,10 @@ fn fakul(faknum:u128) -> u128{
 /**
  * berechnet den Binomialkoeffizienten der uebergebenen Zahlen 'n' und 'k' und gibt das Ergebnis ueber die Konsole aus.
 */
-fn binomkoeff(n:u128, k:u128) {
-
+fn binomkoeff(n:u128,) {
+    //TODO insert loop, to loop through all k-values.
+    //TODO calculate the max number of k-values (kmax = n+1)???
+    let mut k:u128 = 12;
     //n ueber k = n!/(k!*(n-k)!)
 
     let result:u128 = fakul(n)/(fakul(k)*fakul(n-k));
