@@ -3,7 +3,7 @@ use num_bigint::BigUint;// to use BigUint
 use num_traits::FromPrimitive;// to convert Primitive datatypes to BigUint
 
 /**
- * Die Hauptfunktion, sie wir dmit Start des Programmes ausgefuehrt.
+ * Die Hauptfunktion, sie wird mit Start des Programmes ausgefuehrt.
  */
 fn main() {
     //how to assign BIGUINT:  //let bignumber: BigUint = BigUint::from(variable:u128);
